@@ -10,7 +10,7 @@
       "timeout": 30.0
     },
     "deepseek": {
-      "api_key": "sk-75b5785895074b0db119075fa735bcbd",
+      "api_key": "",
       "model": "deepseek-chat",
       "reasoner_model": "deepseek-reasoner",
       "base_url": "https://api.deepseek.com/v1",
