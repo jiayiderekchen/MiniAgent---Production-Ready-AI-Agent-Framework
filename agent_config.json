@@ -1,0 +1,79 @@
+{
+  "llm": {
+    "provider": "deepseek",
+    "openai": {
+      "api_key": "",
+      "model": "gpt-4o-mini",
+      "base_url": "https://api.openai.com/v1",
+      "max_tokens": 4000,
+      "temperature": 0.1,
+      "timeout": 30.0
+    },
+    "deepseek": {
+      "api_key": "sk-75b5785895074b0db119075fa735bcbd",
+      "model": "deepseek-chat",
+      "reasoner_model": "deepseek-reasoner",
+      "base_url": "https://api.deepseek.com/v1",
+      "max_tokens": 4000,
+      "temperature": 0.1,
+      "timeout": 30.0,
+      "enable_complexity_routing": true
+    }
+  },
+  "sandbox": {
+    "max_memory_mb": 512,
+    "max_cpu_time_s": 30,
+    "max_file_size_mb": 100,
+    "max_processes": 5,
+    "enable_network": true,
+    "temp_dir": "/tmp"
+  },
+  "memory": {
+    "persist_dir": "./agent_memory",
+    "vector_store_collection": "semantic_memory",
+    "max_episodic_memories": 1000,
+    "max_working_memory_items": 20,
+    "embedding_model": "all-MiniLM-L6-v2"
+  },
+  "safety": {
+    "enable_content_filtering": true,
+    "enable_command_validation": true,
+    "enable_file_path_validation": true,
+    "max_output_length": 10000,
+    "max_input_length": 50000,
+    "blocked_file_paths": [
+      "/etc/",
+      "/usr/",
+      "/bin/",
+      "/sbin/",
+      "/boot/",
+      "/dev/",
+      "/proc/",
+      "/sys/",
+      "/root/"
+    ]
+  },
+  "runtime": {
+    "max_steps": 10,
+    "default_timeout": 60.0,
+    "enable_logging": true,
+    "log_level": "INFO",
+    "enable_memory_persistence": true,
+    "enable_guardrails": true
+  },
+  "consent": {
+    "enable_interactive_consent": true,
+    "auto_approve_safe_operations": true,
+    "auto_approve_read_operations": true,
+    "require_consent_for_write": true,
+    "require_consent_for_delete": true,
+    "require_consent_for_execute": true,
+    "safe_directories": [
+      "./",
+      "./temp/",
+      "./workspace/",
+      "./output/",
+      "./artifacts/"
+    ]
+  }
+}
