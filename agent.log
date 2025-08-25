@@ -1,0 +1,89 @@
+2025-08-24 20:16:25,239 - test_logger - INFO - This is a test INFO message
+2025-08-24 20:16:25,239 - test_logger - WARNING - This is a test WARNING message
+2025-08-24 20:16:25,239 - test_logger - ERROR - This is a test ERROR message
+2025-08-24 20:16:40,536 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-24 20:16:40,536 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-24 20:16:41,238 - miniagent.core.runtime - INFO - Starting agent with goal: Test log from correct directory
+2025-08-24 20:16:41,352 - miniagent.policy.complexity_analyzer - INFO - Complexity analysis for 'Test log from correct directory...': deepseek-chat (complex: False)
+2025-08-24 20:16:41,352 - miniagent.policy.model_selector - INFO - Model selection: deepseek-chat for question: 'Test log from correct directory...' (complex: False)
+2025-08-24 20:16:41,352 - miniagent.policy.planner_llm - INFO - Selected model: deepseek-chat (complex: False) for goal: 'Test log from correct directory...'
+2025-08-24 20:16:41,366 - miniagent.policy.planner_llm - INFO - Available tools: ['file.read', 'file.write', 'file.list', 'file.mkdir', 'file.delete', 'web.search', 'web.fetch', 'code.python', 'shell.exec', 'math.calc', 'text.summarize', 'system.info', 'weather.info', 'stock.info', 'memory.store', 'memory.search']
+2025-08-24 20:16:41,366 - miniagent.policy.planner_llm - INFO - Tool functions created: 16
+2025-08-24 20:16:41,366 - miniagent.policy.planner_llm - INFO - Using deepseek provider with model deepseek-chat
+2025-08-24 20:16:41,911 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 20:16:47,917 - miniagent.policy.planner_llm - INFO - LLM Response - Tool calls: [ChatCompletionMessageFunctionToolCall(id='call_0_ddc07b45-5596-4954-a861-1f9c72398a28', function=Function(arguments='{"path": "."}', name='file_list'), type='function', index=0)]
+2025-08-24 20:16:47,917 - miniagent.policy.planner_llm - INFO - LLM Response - Content: I need to understand what you mean by "Test log from correct directory." This could involve checking if a log file exists in a specific directory, reading a log file, or testing directory operations. Let me first check the current directory structure to understand what we're working with.
+2025-08-24 20:16:47,917 - miniagent.policy.planner_llm - INFO - Function: file_list, Arguments: {'path': '.'}
+2025-08-24 20:16:48,045 - miniagent.core.runtime - INFO - Step 0: Used tool file.list
+2025-08-24 20:16:48,053 - miniagent.policy.complexity_analyzer - INFO - Complexity analysis for 'Test log from correct directory...': deepseek-chat (complex: False)
+2025-08-24 20:16:48,053 - miniagent.policy.model_selector - INFO - Model selection: deepseek-chat for question: 'Test log from correct directory...' (complex: False)
+2025-08-24 20:16:48,054 - miniagent.policy.planner_llm - INFO - Selected model: deepseek-chat (complex: False) for goal: 'Test log from correct directory...'
+2025-08-24 20:16:48,058 - miniagent.policy.planner_llm - INFO - Available tools: ['file.read', 'file.write', 'file.list', 'file.mkdir', 'file.delete', 'web.search', 'web.fetch', 'code.python', 'shell.exec', 'math.calc', 'text.summarize', 'system.info', 'weather.info', 'stock.info', 'memory.store', 'memory.search']
+2025-08-24 20:16:48,058 - miniagent.policy.planner_llm - INFO - Tool functions created: 16
+2025-08-24 20:16:48,058 - miniagent.policy.planner_llm - INFO - Using deepseek provider with model deepseek-chat
+2025-08-24 20:16:48,393 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 20:16:51,430 - miniagent.policy.planner_llm - INFO - LLM Response - Tool calls: [ChatCompletionMessageFunctionToolCall(id='call_0_be8879f6-f034-4b39-a859-76808bfdc991', function=Function(arguments='{"path": "."}', name='file_list'), type='function', index=0)]
+2025-08-24 20:16:51,431 - miniagent.policy.planner_llm - INFO - LLM Response - Content: 
+2025-08-24 20:16:51,431 - miniagent.policy.planner_llm - INFO - Function: file_list, Arguments: {'path': '.'}
+2025-08-24 20:16:51,505 - miniagent.core.runtime - INFO - Step 1: Used tool file.list
+2025-08-24 20:16:51,506 - miniagent.core.runtime - INFO - Agent reached max steps (2)
+2025-08-24 22:55:07,313 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-24 22:55:07,313 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-24 22:55:07,932 - miniagent.core.runtime - INFO - Starting agent with goal: what is the date today?
+2025-08-24 22:55:08,043 - miniagent.policy.complexity_analyzer - INFO - Complexity analysis for 'what is the date today?...': deepseek-chat (complex: False)
+2025-08-24 22:55:08,043 - miniagent.policy.model_selector - INFO - Model selection: deepseek-chat for question: 'what is the date today?...' (complex: False)
+2025-08-24 22:55:08,043 - miniagent.policy.planner_llm - INFO - Selected model: deepseek-chat (complex: False) for goal: 'what is the date today?...'
+2025-08-24 22:55:08,056 - miniagent.policy.planner_llm - INFO - Available tools: ['file.read', 'file.write', 'file.list', 'file.mkdir', 'file.delete', 'web.search', 'web.fetch', 'code.python', 'shell.exec', 'math.calc', 'text.summarize', 'system.info', 'weather.info', 'stock.info', 'memory.store', 'memory.search']
+2025-08-24 22:55:08,057 - miniagent.policy.planner_llm - INFO - Tool functions created: 16
+2025-08-24 22:55:08,057 - miniagent.policy.planner_llm - INFO - Using deepseek provider with model deepseek-chat
+2025-08-24 22:55:09,692 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 22:55:19,838 - miniagent.policy.planner_llm - INFO - LLM Response - Tool calls: [ChatCompletionMessageFunctionToolCall(id='call_0_3dd236b9-60c7-4462-b92b-255007f446d8', function=Function(arguments='{"q": "current date today"}', name='web_search'), type='function', index=0)]
+2025-08-24 22:55:19,839 - miniagent.policy.planner_llm - INFO - LLM Response - Content: I need to get the current date since this requires real-time information. Let me search for the current date.
+2025-08-24 22:55:19,839 - miniagent.policy.planner_llm - INFO - Function: web_search, Arguments: {'q': 'current date today'}
+2025-08-24 22:55:19,996 - httpx - INFO - HTTP Request: GET https://api.duckduckgo.com/?q=current+date+today&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 200 OK"
+2025-08-24 22:55:20,852 - httpx - INFO - HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/1.1 200 OK"
+2025-08-24 22:55:20,947 - miniagent.core.runtime - INFO - Step 0: Used tool web.search
+2025-08-24 22:55:20,957 - miniagent.policy.complexity_analyzer - INFO - Complexity analysis for 'what is the date today?...': deepseek-chat (complex: False)
+2025-08-24 22:55:20,957 - miniagent.policy.model_selector - INFO - Model selection: deepseek-chat for question: 'what is the date today?...' (complex: False)
+2025-08-24 22:55:20,957 - miniagent.policy.planner_llm - INFO - Selected model: deepseek-chat (complex: False) for goal: 'what is the date today?...'
+2025-08-24 22:55:20,961 - miniagent.policy.planner_llm - INFO - Available tools: ['file.read', 'file.write', 'file.list', 'file.mkdir', 'file.delete', 'web.search', 'web.fetch', 'code.python', 'shell.exec', 'math.calc', 'text.summarize', 'system.info', 'weather.info', 'stock.info', 'memory.store', 'memory.search']
+2025-08-24 22:55:20,961 - miniagent.policy.planner_llm - INFO - Tool functions created: 16
+2025-08-24 22:55:20,961 - miniagent.policy.planner_llm - INFO - Using deepseek provider with model deepseek-chat
+2025-08-24 22:55:21,312 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 22:55:26,689 - miniagent.policy.planner_llm - INFO - LLM Response - Tool calls: [ChatCompletionMessageFunctionToolCall(id='call_0_5504ecb6-1e0e-469d-b946-a2e5f573b0d8', function=Function(arguments='{"q": "current date and time today"}', name='web_search'), type='function', index=0)]
+2025-08-24 22:55:26,689 - miniagent.policy.planner_llm - INFO - LLM Response - Content: I need to search for the current date using a more specific query since the previous search didn't provide the actual date information.
+2025-08-24 22:55:26,689 - miniagent.policy.planner_llm - INFO - Function: web_search, Arguments: {'q': 'current date and time today'}
+2025-08-24 22:55:26,790 - httpx - INFO - HTTP Request: GET https://api.duckduckgo.com/?q=current+date+and+time+today&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 200 OK"
+2025-08-24 22:55:27,573 - httpx - INFO - HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/1.1 200 OK"
+2025-08-24 22:55:27,647 - miniagent.core.runtime - INFO - Step 1: Used tool web.search
+2025-08-24 22:55:27,657 - miniagent.policy.complexity_analyzer - INFO - Complexity analysis for 'what is the date today?...': deepseek-chat (complex: False)
+2025-08-24 22:55:27,657 - miniagent.policy.model_selector - INFO - Model selection: deepseek-chat for question: 'what is the date today?...' (complex: False)
+2025-08-24 22:55:27,657 - miniagent.policy.planner_llm - INFO - Selected model: deepseek-chat (complex: False) for goal: 'what is the date today?...'
+2025-08-24 22:55:27,661 - miniagent.policy.planner_llm - INFO - Available tools: ['file.read', 'file.write', 'file.list', 'file.mkdir', 'file.delete', 'web.search', 'web.fetch', 'code.python', 'shell.exec', 'math.calc', 'text.summarize', 'system.info', 'weather.info', 'stock.info', 'memory.store', 'memory.search']
+2025-08-24 22:55:27,661 - miniagent.policy.planner_llm - INFO - Tool functions created: 16
+2025-08-24 22:55:27,661 - miniagent.policy.planner_llm - INFO - Using deepseek provider with model deepseek-chat
+2025-08-24 22:55:28,599 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 22:55:32,729 - miniagent.policy.planner_llm - INFO - LLM Response - Tool calls: [ChatCompletionMessageFunctionToolCall(id='call_0_8c7c53a1-f1ba-4f5e-a0b4-7e2c4ed8804c', function=Function(arguments='{"q": "what is today\'s date"}', name='web_search'), type='function', index=0)]
+2025-08-24 22:55:32,729 - miniagent.policy.planner_llm - INFO - LLM Response - Content: 
+2025-08-24 22:55:32,729 - miniagent.policy.planner_llm - INFO - Function: web_search, Arguments: {'q': "what is today's date"}
+2025-08-24 22:55:32,843 - httpx - INFO - HTTP Request: GET https://api.duckduckgo.com/?q=what+is+today%27s+date&format=json&no_html=1&skip_disambig=1 "HTTP/1.1 200 OK"
+2025-08-24 22:55:33,602 - httpx - INFO - HTTP Request: POST https://html.duckduckgo.com/html/ "HTTP/1.1 200 OK"
+2025-08-24 22:55:33,663 - miniagent.core.runtime - INFO - Step 2: Used tool web.search
+2025-08-24 22:55:33,663 - miniagent.core.runtime - INFO - Agent reached max steps (3)
+2025-08-24 22:57:04,600 - miniagent.guard.consent - INFO - User approved: shell.exec on date
+2025-08-24 22:59:01,741 - miniagent.guard.consent - INFO - User approved: shell.exec on date
+2025-08-24 23:00:09,221 - miniagent.guard.consent - INFO - Auto-approved (safe): shell.exec on date
+2025-08-24 23:00:09,221 - miniagent.guard.consent - INFO - User approved: shell.exec on date
+2025-08-24 23:00:36,613 - miniagent.guard.consent - INFO - Auto-approved (safe): shell.exec on pwd
+2025-08-24 23:00:36,613 - miniagent.guard.consent - INFO - User approved: shell.exec on pwd
+2025-08-24 23:00:40,959 - miniagent.guard.consent - INFO - Auto-approved (safe): shell.exec on pwd
+2025-08-24 23:00:40,959 - miniagent.guard.consent - INFO - User approved: shell.exec on pwd
+2025-08-24 23:03:19,067 - miniagent.guard.consent - INFO - Auto-approved (safe): shell.exec on date
+2025-08-24 23:03:19,067 - miniagent.guard.consent - INFO - User approved: shell.exec on date
+2025-08-24 23:05:19,998 - miniagent.guard.consent - INFO - Auto-approved (safe): file.write on /Users/jiayichen/Files/agent/miniagent-starter/artifacts/hello_world.py
+2025-08-24 23:05:19,998 - miniagent.guard.consent - INFO - User approved: file.write on /Users/jiayichen/Files/agent/miniagent-starter/artifacts/hello_world.py
+2025-08-24 23:06:42,030 - miniagent.guard.consent - INFO - User denied: file.delete on /Users/jiayichen/Files/agent/miniagent-starter/artifacts/hello_world.py
+2025-08-24 23:07:04,794 - miniagent.guard.consent - INFO - User denied: file.delete on /Users/jiayichen/Files/agent/miniagent-starter/artifacts/hello_world.py
+2025-08-24 23:08:07,442 - miniagent.guard.consent - INFO - User denied: file.delete on /Users/jiayichen/Files/agent/miniagent-starter/artifacts/hello_world.py
+2025-08-24 23:08:24,075 - miniagent.guard.consent - INFO - User denied: file.delete on /Users/jiayichen/Files/agent/miniagent-starter/artifacts/hello_world.py
+2025-08-24 23:13:19,634 - miniagent.guard.consent - INFO - User denied: file.delete on hello_world.py
